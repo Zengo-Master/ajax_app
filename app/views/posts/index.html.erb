@@ -5,12 +5,13 @@
 <% end %>
 
 <% @posts.each do |post| %>
-  <div class="post">
-    <div class="post-date">
-      投稿日時：<%= post.created_at %>
-    </div>
-    <div class="post-content">
-      <%= post.content %>
-    </div>
+<%# メモのidと既読の有無を代入しておく %>
+<div class="post" data-id=<%= post.id %> data-check=<%= post.checked %>>
+  <div class="post-date">
+    投稿日時：<%= post.created_at %>
   </div>
+  <div class="post-content">
+    <%= post.content %>
+  </div>
+</div>
 <% end %>
