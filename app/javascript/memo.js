@@ -19,7 +19,7 @@ function memo() {
           ${item.content}
           </div>
         </div>`;
-      list.insertAdjacentHTML("afterend", HTML); // HTMLは定義されている
+      list.insertAdjacentHTML("afterend", HTML); // HTMLはL13で定義されている
 
       formText.value = "";
 
