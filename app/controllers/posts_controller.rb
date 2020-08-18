@@ -4,8 +4,8 @@ class PostsController < ApplicationController
   end
 
   def create
-    Post.create(content: params[:content]) # paramsに入ったcontentというデータを生成
-    redirect_to action: :index # トップページにリダイレクト
+    post = Post.create(content: params[:content], checked: false) # 最初は未読
+    render json:{ post: post } # レスポンスをJSONに変更
   end
 
   def checked # レスポンスに対応する記述
