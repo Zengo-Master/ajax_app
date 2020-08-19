@@ -10,7 +10,7 @@ function memo() {
       const item = XHR.response.post; // レスポンスのメモのレコードデータを取得
       const list = document.getElementById("list"); // 描画する親要素のlist要素を取得
       const formText = document.getElementById("content"); // 入力フォームのリセット
-      const HTML = ` // HTMLを定義
+      const HTML = `
         <div class="post" data-id=${item.id}>
           <div class="post-date">
             投稿日時：${item.created_at}
